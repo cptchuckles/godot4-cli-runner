@@ -29,6 +29,12 @@ Saving and exiting the editor automatically runs the script:
 >
 > hello world
 ```
+You can also manually invoke any script previously created:
+```bash
+$ ./run.gd hello-world
+```
+Scripts are saved to a `scripts/` directory.  You should only use the basename of the script, and you
+can omit the `.gd` file extension.
 
 ### Requirements
 

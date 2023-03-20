@@ -7,7 +7,7 @@ func _initialize() -> void:
     if args.size() != 3:
         return die("Usage: %s <script>" % args[1])
 
-    var script_path = "res://%s" % args[2]
+    var script_path = "res://scripts/%s" % args[2]
     if not script_path.ends_with(".gd"):
         script_path += ".gd"
 
