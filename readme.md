@@ -8,7 +8,7 @@ and also the above playground is not using the latest version of Godot.
 ```bash
 $ ./new -r hello-world
 ```
-This automatically generates and opens the file `hello-world.gd`, whereafter `_init()` has been implemented:
+This automatically generates and opens the file `scripts/hello-world.gd`, whereafter `_init()` has been implemented:
 ```gdscript
 extends Node
 
