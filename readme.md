@@ -29,3 +29,8 @@ Saving and exiting the editor automatically runs the script:
 >
 > hello world
 ```
+
+### Requirements
+
+- [Godot 4](https://godotengine.org)
+- `godot4` executable in `PATH` pointed at the above
