@@ -1,0 +1,39 @@
+#!/bin/bash
+
+cd "$(dirname -- "$0")" || exit 1
+
+script=$1
+
+function enumerate() {
+    local -n arr=$1
+    local i=0
+    for e in "${arr[@]}"; do
+        let i++
+        printf '\t%d) %s\n' "$i" "$e"
+    done
+}
+
+function list_scripts() {
+    basename -s.gd -a scripts/*
+}
+
+if [[ -z $script ]]; then
+    mapfile -t scripts < <(list_scripts)
+
+    printf 'Available scripts to run:\n'
+    enumerate scripts
+
+    read -rp 'Run script: '
+
+    [[ $REPLY =~ ^[[:digit:]]+$ ]] \
+        && script="${scripts[$(( --REPLY ))]}" \
+        || script=$REPLY
+
+    [[ -z $script ]] && exit
+fi
+
+printf 'Running `%s'\''...\n' "$script"
+
+/usr/bin/env -S godot4 --headless --script ./main.gd "$script"
+
+# vim:et:ts=4:sts=4:sw=4

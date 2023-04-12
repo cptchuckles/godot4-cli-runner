@@ -34,6 +34,6 @@ ret=$?
 (( ret > 0 )) && exit $ret
 
 ${EDITOR:-/bin/vim} -- "scripts/${filename}"
-$run && ./run.gd "$filename"
+$run && ./run "$filename"
 
 # vim:et:ts=4:sts=4:sw=4

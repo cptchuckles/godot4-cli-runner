@@ -1,4 +1,3 @@
-#!/usr/bin/env -S godot4 --headless --script
 extends SceneTree
 
 
