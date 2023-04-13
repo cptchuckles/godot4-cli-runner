@@ -14,7 +14,7 @@ function enumerate() {
 }
 
 function list_scripts() {
-    basename -s.gd -a scripts/*
+    basename -s.gd -a scripts/*.gd
 }
 
 if [[ -z $script ]]; then
